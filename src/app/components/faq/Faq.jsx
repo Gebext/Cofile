@@ -38,13 +38,13 @@ const FAQ = () => {
           </h1>
         </div>
       </div>
-      <div className=" px-5 ">
+      <div className="md:px-5 ">
         <div className="grid divide-y divide-neutral-200  mx-auto mt-8">
           {faqData.map((faq) => (
             <div key={faq.id} className="py-4">
               <details className="group">
                 <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-                  <span className="w-96">{faq.question}</span>
+                  <span className="md:w-96 w-64">{faq.question}</span>
                   <span className="transition group-open:rotate-180">
                     <svg
                       fill="none"
@@ -61,7 +61,9 @@ const FAQ = () => {
                     </svg>
                   </span>
                 </summary>
-                <p className="text-neutral-600 mt-3 w-96">{faq.answer}</p>
+                <p className="text-neutral-600 mt-3 md:w-96 w-full">
+                  {faq.answer}
+                </p>
               </details>
             </div>
           ))}
